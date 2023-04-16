@@ -1,0 +1,17 @@
+#!/bin/bash
+select Drink in tea coffee water Juice soda all none
+   do
+     case$Drink in
+	     tea|coffee|water|all)
+         echo "Go to canteen"
+        ;;
+       juice|soda)	
+	 echo "available at home"
+	 ;;
+         none)
+          break
+	  ;;
+         *)echo "ERROR: Invalid selection"
+	  ;;
+          esac
+          done
